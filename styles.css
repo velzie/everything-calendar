@@ -1,0 +1,46 @@
+:root {
+    --base: #191724;
+	--surface: #1f1d2e;
+	--overlay: #26233a;
+	--muted: #6e6a86;
+	--subtle: #908caa;
+	--text: #e0def4;
+	--love: #eb6f92;
+	--gold: #f6c177;
+	--rose: #ebbcba;
+	--pine: #31748f;
+	--foam: #9ccfd8;
+	--iris: #c4a7e7;
+	--highlight-low: #21202e;
+	--highlight-med: #403d52;
+	--highlight-high: #524f67;
+}
+body,html, #root {
+    width: 100%;
+    height: 100%;
+    color: var(--text);
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+button {
+    border: none;
+    color: var(--text);
+    background-color: var(--muted);
+    font-size: 15px;
+    border-radius: 3px;
+    padding: 0.25em;
+}
+
+input {
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    color: var(--text);
+    background-color: var(--muted);
+}
