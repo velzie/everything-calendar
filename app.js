@@ -8,13 +8,11 @@ export const global = $store({
 
 export function NewTracker() {
   this.css = css`
-self {
-  background-color: var(--overlay);
-  border-radius: 5px;
-  padding: 1em;
-}
+background-color: var(--overlay);
+border-radius: 5px;
+padding: 1em;
 
-self > * {
+> * {
   margin-bottom: 0.5em;
 }
 
@@ -47,11 +45,9 @@ self > * {
 
 export function App() {
   this.css = css`
-self {
-  background-color: var(--base);
-  padding: 0.5em;
-  overflow-y: scroll;
-}
+background-color: var(--base);
+padding: 0.5em;
+overflow-y: scroll;
 `;
 
   return html`

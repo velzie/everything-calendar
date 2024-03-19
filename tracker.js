@@ -11,18 +11,17 @@ export function daysIntoYear(date) {
 
 export function Calendar() {
   this.css = css`
-self {
-  display: grid;
 
-  grid-auto-flow:column;
-  grid-template-rows: repeat(7, min-content);
+display: grid;
 
-  gap: 3px;
-  padding: 0.5em;
-  border-radius: 5px;
-  background-color: var(--overlay);
-  width: min-content;
-}
+grid-auto-flow:column;
+grid-template-rows: repeat(7, min-content);
+
+gap: 3px;
+padding: 0.5em;
+border-radius: 5px;
+background-color: var(--overlay);
+width: min-content;
 
 .day {
   width: 12px;
@@ -93,15 +92,13 @@ self {
 
 export function Tracker() {
   this.css = css`
-self {
-  background-color: var(--surface);
-  border-radius: 5px;
-  padding: 1em;
-}
+background-color: var(--surface);
+border-radius: 5px;
+padding: 1em;
+
 .title {
   font-size: 1.5em;
 }
-
 
 .dayctl {
   > div {

@@ -1,20 +1,17 @@
 export function Checkbox() {
   this.css = css`
-self {
-  cursor: pointer;
-  outline: none;
-  border-radius: 3px;
-  border: none;
-  padding: 0;
-  font-weight: bold;
-  line-height: 1.1;
-  font-size:1.25em;
-  display: grid;
-  grid-template-columns: 1em auto;
-  gap: 0.5em;
+cursor: pointer;
+outline: none;
+border-radius: 3px;
+border: none;
+padding: 0;
+font-weight: bold;
+line-height: 1.1;
+font-size:1.25em;
+display: grid;
+grid-template-columns: 1em auto;
+gap: 0.5em;
 
-
-}
 input[type="checkbox"] {
   border: 3px solid var(--highlight-med);
   appearance: none;
