@@ -4,7 +4,11 @@ import { Tracker } from "./tracker.js";
 
 export const global = $store({
   trackers: []
-}, "global", "localstorage");
+}, {
+  ident: "global",
+  backing: "localstorage",
+  autosave: "auto",
+});
 
 export function NewTracker() {
   this.css = css`
@@ -58,18 +62,18 @@ overflow-y: scroll;
 
 }
 
-// fix stateful shit
-for (let i in global.trackers) {
-  let tracker = global.trackers[i];
-  tracker.years = stateful(tracker.years);
-  for (let yearnum in tracker.years) {
-    let year = tracker.years[yearnum]
-    for (let day in year) {
-      year[day] = stateful(year[day]);
-    }
-  }
-
-  global.trackers[i] = stateful(tracker);
-}
+// // fix stateful shit
+// for (let i in global.trackers) {
+//   let tracker = global.trackers[i];
+//   tracker.years = stateful(tracker.years);
+//   for (let yearnum in tracker.years) {
+//     let year = tracker.years[yearnum]
+//     for (let day in year) {
+//       year[day] = stateful(year[day]);
+//     }
+//   }
+//
+//   global.trackers[i] = stateful(tracker);
+// }
 
 document.getElementById("root").appendChild(html`<${App}/>`)
